@@ -1,0 +1,100 @@
+.card-price {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  @media (min-width: $width-tablet+px) {
+    padding: 24px 8px 0 8px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    padding: 0 32px;
+    width: 332px;
+  }
+}
+
+.card-price__text {
+  font-size: 14px;
+  line-height: 21px;
+  color: $gray-light;
+
+  &:last-of-type {
+    margin-bottom: 15px;
+
+    @media (min-width: $width-tablet+px) {
+      margin-bottom: 22px;
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.card-price__text--booked {
+  color: $attention-color;
+  font-weight: 500;
+}
+
+.card-price__price {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  color: $gray-dark;
+  display: block;
+  margin-bottom: 12px;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
+
+.card-price__text--developer {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $warning-color;
+
+  @media (min-width: $width-tablet+px) {
+    line-height: 24px;
+  }
+}
+
+.card-price__choose-btn {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 6px;
+  padding: 12px 24px;
+  background: $primary-color;
+  color: $gray-dark;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  &:active {
+    outline: none;
+    border: none;
+    background: $primary-color800;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    margin: 0 auto;
+    align-self: center;
+    width: 268px;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background: $primary-color700;
+      outline: none;
+      border: none;
+
+      &:active {
+        background: $primary-color800;
+      }
+    }
+  }
+}

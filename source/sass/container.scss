@@ -1,0 +1,28 @@
+$min-width: 304;
+$max-width: 1200;
+$width-mobile: 320;
+$width-tablet: 768;
+$width-desktop: 920;
+
+.container {
+  box-sizing: border-box;
+  min-width: $min-width + px;
+  max-width: $min-width + px;
+  margin: 0 auto;
+
+  @media (min-width: $width-mobile+px) {
+    padding: 0 8px;
+    max-width: 100%;
+  }
+
+  @media (min-width: $width-tablet+px) {
+    padding: 0 28px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    max-width: $max-width + px;
+  }
+  @media (min-width: 1280px) {
+    padding: 0;
+  }
+}
